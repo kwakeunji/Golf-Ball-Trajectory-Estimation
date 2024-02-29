@@ -1,6 +1,8 @@
 # Golf-Ball-Trajectory-Estimation
 시계열 데이터 기반 골프공 궤적 예측 모델 개발 프로젝트🏌️‍♂️
+
 ![Untitled](./img/first_shot.png)
+
 YOLOv8 모델을 통해 골프공의 초기 움직임을 포착하고, 
 프레임 속 **골프공의 3차원 상의 위치(x, y, z) 만으로** 전체 골프공의 궤적을 예측하는 모델을 개발하였습니다. 
 
