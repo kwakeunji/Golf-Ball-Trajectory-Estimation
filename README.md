@@ -44,7 +44,10 @@ YOLOv8 모델을 통해 골프공의 초기 움직임을 포착하고,
 
 **Output:**
 
-공의 전체 궤적
+| **전체 궤적** | **전체 궤적2** | 
+| :------: |  :------: | 
+| ![Untitled](./img/xy.png) <br/> xy축 기준 | ![Untitled](./img/xz.png) <br/> xz축 기준 | 
+
 
 **Train Setup** >> 표로 전이 
 - optimizer: adamW (eps: 1e-6)
