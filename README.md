@@ -1,70 +1,54 @@
 # Golf-Ball-Trajectory-Estimation
 시계열 데이터 기반 골프공 궤적 예측 모델 개발 프로젝트🏌️‍♂️
+![Untitled](./img/first_shot.png)
+YOLOv8 모델을 통해 골프공의 초기 움직임을 포착하고, 
+프레임 속 **골프공의 3차원 상의 위치(x, y, z) 만으로** 전체 골프공의 궤적을 예측하는 모델을 개발하였습니다. 
 
 ## 기술 스택
 
 
-## 🧑‍💻 Manual
+## 🧑‍💻 학회지 등록
 
-[Train Manual](https://rogue-impatiens-fb5.notion.site/Train-Manual-a205e357d37e42d685a725a511b8dbee?pvs=4)
+[ICTC 2023 논문](https://2023.ictc.org/program_proceeding)
 
-[Directory Manual](https://rogue-impatiens-fb5.notion.site/Directory-Manual-998424c680cd483caf8f0203b6e56a05?pvs=4)
-
-## 📂Dataset: ****VinDr-RibCXR****
+## 📂Dataset: 
 
 - Train dataset: 4,500
 - Validation dataset: 500
 
 
 
-## 🚀Model: Unet
+## 🚀Model: 
+- Machine learning: linear regression
+- LSTM model 
 
+**데이터 생성 model:** Linear regression 
 
+- Initial velocity(초기 공의 속도): 공이 뜨기 시작했을 때의 속도
+- Spin rate(스핀량)
+- Spin axis(스핀축)
+- xz theta(x와 z 사이 각도): 공이 휘어진 각도
 
-**ref.** https://github.com/qubvel/segmentation_models.pytorch
+**궤적 예측 model:** LSTM 
 
-**Base model:** Unet
-
-- backbone: Efficientnet b0
-- 2차 Developed model: Attention UNet
-- 3차 Developed model: Attention Unet + residual block
-- 4차 Developed model: Unet + residual block
+[]
 
 **Output:**
 
-총 20개의 segmented mask가 1장씩 나옴 → 이를 모두 합치면 ⇒ **512x512x20** 사이즈의 이미지
+공의 전체 궤적
 
-**Train Setup**
+**Train Setup** >> 표로 전이 
 - optimizer: adamW (eps: 1e-6)
 
 - base learning_rate: 1e-3
 
-- loss function: dice loss function
+- loss function: 
 
 - epoch: 200
 
 - batch size: 8
 
 - augmentation: HorizontalFlip, shiftscalerotate
-
-## ✅ Modules
-
-
-
-**1. Attention module: scSE**
-
-**2. Data Preprocessing** : Gaussian blur,  CLAHE
-    ![Untitled](./img/Untitled%201.png)
-    
-**3. Change Convolution block to “Residual”**
-
-- **encoder에만 삽입**
-  
-        
-- **decoder에만 삽입**
-
-        
-- **encoder+decoder 모두 삽입**
 
 
 ## 💯 Results
