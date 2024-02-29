@@ -19,22 +19,22 @@ YOLOv8 모델을 통해 골프공의 초기 움직임을 포착하고,
 - Train dataset: 4,500
 - Validation dataset: 500
 
-
-
-## 🚀Model: 
-- Machine learning: linear regression
-- LSTM model 
-
-**데이터 생성 model:** Linear regression 
+- **데이터 생성 model:** Linear regression 
 
 - Initial velocity(초기 공의 속도): 공이 뜨기 시작했을 때의 속도
 - Spin rate(스핀량)
 - Spin axis(스핀축)
 - xz theta(x와 z 사이 각도): 공이 휘어진 각도
 
+
+
+## 🚀Model: 
+- Machine learning: linear regression
+- LSTM model 
+
 **궤적 예측 model:** LSTM 
 
-[]
+![Untitled](./img/model.png)
 
 **Output:**
 
