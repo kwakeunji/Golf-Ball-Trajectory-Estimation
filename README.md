@@ -7,7 +7,9 @@ YOLOv8 모델을 통해 골프공의 초기 움직임을 포착하고,
 
 프레임 속 **골프공의 3차원 상의 위치(x, y, z) 만으로** 전체 골프공의 궤적을 예측하는 모델을 개발하였습니다. 
 
-## 기술 스택
+## 📚 기술 스택
+
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 
 
 ## 🧑‍💻 학회지 등록
